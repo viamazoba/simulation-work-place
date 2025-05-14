@@ -6,8 +6,6 @@ import buttonExampleC from './button-code-example.twig'
 
 // Aquí se importan los YML
 import buttonData from './button.yml';
-import buttonSecondaryData from './secondary-button.yml';
-import buttonTertiaryData from './tertiary-button.yml'
 import buttonExampleData from './_button-code-example.yml'
 
 /**
@@ -19,18 +17,7 @@ import buttonExampleData from './_button-code-example.yml'
  * |  secondary  |  medium  |
  * |  tertiary  |   small |
  * 
- * > **Nota aclaratoria:** Las columnas de la anterior tabla no tienen una relación única, solo es una forma de listar las variaciones y tamaños,
- * ya que un botón primary cuenta con los diferentes tamaños y no sólo con large.
- * 
- * Por lo anterior, se ha definido una variable que contiene las variables anteriores de la siguiente manera: **btn-[variación]-[tamaño]**, donde dicha variable se puede encontrar en figma. Ahora, este componente posee los siguientes modificadores que se especifican más abajo: **iconRight**, **iconLeft**, **full** y **dark**.
- * 
- * ### Link con estilos de botón
- * Este elemento también puede comportarse como un link, por esta razón posee los atributos **href** y **target**, pero sólo se comportará como un link si se establece **href** diferente de **none** así el componente pasará de ser un botón con etiqueta **button** a un botón con etiqueta **a** (un link).
- * 
- * > **Nota accesibilidad**: Para añadir accesibilidad a este átomo se ha dejado disponible el atributo **aria-label**, el cual si no es definido tomará por defecto el texto insertado para el botón.
- * 
- * 
- * > **Nota importante:** El dark mode que se muestra a continuación es simplemente una ayuda para visualizar el componente en este estado, pero en la práctica el botón cambia al dark mode automáticamente cuando  su contenedor padre contiene la clase **theme-dark**.
+ *
  */
 
 export default {
@@ -39,7 +26,7 @@ export default {
     id: {
       name: 'id',
       type: 'string',
-      description: 'Variable que define el id para buttons',
+      description: 'Esta es la descripción del controlador',
       table: {
         type: { summary: 'string' },
         defaultValue: { summary: '0' },
@@ -48,16 +35,16 @@ export default {
     classB: {
       name: 'button_base_class',
       type: 'string',
-      description: 'Esta es la variable definida en figma para el botón utilizado, ejemplo: **btn-primary-large**, **btn-secondary-small**, **btn-tertiary-medium**.',
+      description: 'Esta es la descripción del controlador',
       table: {
         type: { summary: 'string' },
-        defaultValue: { summary: 'btn-primary-large' },
+        defaultValue: { summary: 'valor por defecto' },
       }
     },
     textB: {
       name: 'button_text',
       type: 'string',
-      description: 'Variable que establece el texto dentro del componente',
+      description: 'Esta es la descripción del controlador',
       table: {
         type: { summary: 'string' },
         defaultValue: { summary: 'Más programas' },
@@ -66,7 +53,7 @@ export default {
     aria_label: {
       name: 'aria_label',
       type: 'string',
-      description: 'Variable que establece la descripción del componente para los **lectores de pantalla**',
+      description: 'Esta es la descripción del controlador',
       table: {
         type: { summary: 'string' },
         defaultValue: { summary: 'Más programas' },
@@ -75,7 +62,7 @@ export default {
     href: {
       name: 'href',
       type: 'string',
-      description: 'En este parámetro se coloca la url a la que se desea ir. Este parámetro al ser definido y ser diferente de **none** cambia la etiqueta de **button** a una etiqueta **a**.',
+      description: 'Esta es la descripción del controlador',
       table: {
         type: { summary: 'string' },
         defaultValue: { summary: 'none' },
@@ -84,7 +71,7 @@ export default {
     target: {
       name: 'target',
       type: 'string',
-      description: 'En este parámetro permite elegir si la url desea abrirse en la misma ventana o en otra. Este parámetro sólo es válido cuando el **href** del botón es diferente de **none**.',
+      description: 'Esta es la descripción del controlador',
       table: {
         type: { summary: 'string' },
         defaultValue: { summary: 'none' },
@@ -93,7 +80,7 @@ export default {
     rightI: {
       name: 'iconRight',
       type: 'boolean',
-      description: 'Esta variable establece el **icono derecho** en el botón.',
+      description: 'Esta es la descripción del controlador',
       table: {
         type: { summary: 'boolean' },
         defaultValue: { summary: false },
@@ -101,7 +88,7 @@ export default {
     },
     leftI: {
       name: 'iconLeft',
-      description: 'Esta variable establece el **icono izquierdo** en el botón.',
+      description: 'Esta es la descripción del controlador',
       type: 'boolean',
       table: {
         type: { summary: 'boolean' },
@@ -111,7 +98,7 @@ export default {
     darkC: {
       name: 'dark',
       type: 'boolean',
-      description: 'Esta variable permite visualizar el **modo oscuro** del botón.',
+      description: 'Esta es la descripción del controlador',
       table: {
         type: { summary: 'boolean' },
         defaultValue: { summary: false },
@@ -120,7 +107,7 @@ export default {
     fullC: {
       name: 'full',
       type: 'boolean',
-      description: 'Esta variable permite que el botón tenga un **width del 100%**, esto se deja como comodin para futuros componentes.',
+      description: 'Esta es la descripción del controlador',
       table: {
         type: { summary: 'boolean' },
         defaultValue: { summary: false },
@@ -142,7 +129,7 @@ export default {
 };
 
 /**
- * A continuación se muestra un botón primary **(btn-primary-large)** como ejemplo:
+ * Este es el texto que se muestra en el ejemplo:
  */
 
 export const primaryButton = ({
@@ -185,19 +172,3 @@ primaryButton.parameters = {
   ]
 };
 
-
-/**
- * A continuación se muestra un botón secondary **(btn-secondary-large)** como ejemplo:
- */
-export const secondaryButton = () => buttonC(buttonSecondaryData);
-
-/**
- * A continuación se muestra un botón primary **(btn-tertiary-large)** como ejemplo:
- */
-export const tertiaryButton = () => buttonC(buttonTertiaryData);
-
-/**
- * En el siguiente bloque se muestra el código necesario para implementar el componente botón:
- */
-
-export const buttonExample = () => buttonExampleC(buttonExampleData)
