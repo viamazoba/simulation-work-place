@@ -1,0 +1,276 @@
+@mixin heading-sourceSans3 (
+  $font-size: 1.4rem,
+  $font-weight: 700,
+  $letter-spacing: 0.5rem,
+  $line-height: 1.6rem,
+  $text-decoration: none,
+  $paragraph-spacing: 0rem,
+) {
+	font-family: 'Source Sans 3';
+	font-size: $font-size;
+	font-weight: $font-weight;
+	letter-spacing: $letter-spacing;
+	line-height: $line-height;
+	font-style: normal;
+	text-decoration: $text-decoration;
+	margin-bottom: $paragraph-spacing;
+}
+
+@mixin heading-sourceSerif4 (
+  $font-size: 1.4rem,
+  $font-weight: 700,
+  $letter-spacing: 0.5rem,
+  $line-height: 1.6rem,
+  $text-decoration: none,
+  $paragraph-spacing: 0rem,
+) {
+	font-family: 'Source Serif 4';
+	font-size: $font-size;
+	font-weight: $font-weight;
+	letter-spacing: $letter-spacing;
+	line-height: $line-height;
+	font-style: normal;
+	text-decoration: $text-decoration;
+	margin-bottom: $paragraph-spacing;
+}
+
+
+.ss3-title-700 {
+  @include heading-sourceSans3($font-size:2rem, $font-weight: 700, $line-height:2.25rem, $letter-spacing:-0.02rem);
+
+  @include medium {
+    @include heading-sourceSans3($font-size:2.5rem, $font-weight: 700, $line-height:3rem, $letter-spacing:-0.025rem);
+  }
+
+  @include large {
+    @include heading-sourceSans3($font-size:3rem, $font-weight: 700, $line-height:3.5rem, $letter-spacing:-0.06rem);
+  }
+}
+
+.ss3-title-300 {
+  @include heading-sourceSans3($font-size:2rem, $font-weight: 300, $line-height:2.25rem, $letter-spacing:-0.02rem);
+
+  @include medium {
+    @include heading-sourceSans3($font-size:2.5rem, $font-weight: 300, $line-height:3rem, $letter-spacing:-0.025rem);
+  }
+
+  @include large {
+    @include heading-sourceSans3($font-size:3rem, $font-weight: 300, $line-height:3.5rem, $letter-spacing:-0.06rem);
+  }
+}
+
+.ss3-subTitle-700 {
+  @include heading-sourceSans3($font-size:1.5rem, $font-weight:700, $letter-spacing:0rem, $line-height:1.75rem);
+
+  @include medium {
+    @include heading-sourceSans3($font-size:2rem, $font-weight:700, $letter-spacing:0rem, $line-height:2.25rem);
+  }
+
+  @include large {
+    @include heading-sourceSans3($font-size:2.5rem, $font-weight: 700, $line-height:3rem, $letter-spacing:-0.025rem);
+  }
+}
+
+.ss3-subTitle-300 {
+  @include heading-sourceSans3($font-size:1.5rem, $font-weight:300, $letter-spacing:0rem, $line-height:1.75rem);
+
+  @include medium {
+    @include heading-sourceSans3($font-size:2rem, $font-weight:300, $letter-spacing:0rem, $line-height:2.25rem);
+  }
+
+  @include large {
+    @include heading-sourceSans3($font-size:2.5rem, $font-weight: 300, $line-height:3rem, $letter-spacing:-0.025rem);
+  }
+}
+.ss3-subTitle-400 {
+  @include heading-sourceSans3($font-size:1.5rem, $font-weight:400, $letter-spacing:0rem, $line-height:1.75rem);
+
+  @include medium {
+    @include heading-sourceSans3($font-size:2rem, $font-weight:400, $letter-spacing:0rem, $line-height:2.25rem);
+  }
+
+  @include large {
+    @include heading-sourceSans3($font-size:2.5rem, $font-weight: 400, $line-height:3rem, $letter-spacing:-0.025rem);
+  }
+}
+
+.ss3-subSubTitle-600 {
+  @include heading-sourceSans3($font-size:1.25rem, $font-weight:600, $letter-spacing: 0rem, $line-height:1.5rem);
+
+  @include medium {
+    @include heading-sourceSans3($font-size:1.5rem, $font-weight:600, $letter-spacing:0rem, $line-height:1.75rem);
+  }
+
+  @include large {
+    @include heading-sourceSans3($font-size:2rem, $font-weight: 600, $line-height:2.25rem, $letter-spacing:0rem);
+  }
+}
+
+.ss3-accordionSubtitle-600 {
+	@include heading-sourceSans3($font-size:0.875rem, $font-weight:600, $line-height:1.15rem, $letter-spacing:0rem, $paragraph-spacing:0.875rem);
+
+	@include medium {
+		@include heading-sourceSans3($font-size:1rem, $font-weight:600, $line-height:1.5rem, $letter-spacing:0rem, $paragraph-spacing:1rem);
+	}
+}
+
+.ss3-accordionTitle-700 {
+	@include heading-sourceSans3($font-size:0.875rem, $font-weight:700, $line-height:1.15rem, $letter-spacing:0rem, $paragraph-spacing:0.875rem);
+
+	@include medium {
+		@include heading-sourceSans3($font-size:1rem, $font-weight:700, $line-height:1.5rem, $letter-spacing:0rem, $paragraph-spacing:1rem);
+	}
+}
+
+// Source Serif 4
+.ssf4-title-500 {
+  @include heading-sourceSerif4($font-weight:500, $font-size:2rem, $line-height:2.25rem, $letter-spacing:-0.06rem);
+
+  @include medium {
+    @include heading-sourceSerif4($font-weight:500, $font-size:2.5rem, $line-height:3rem, $letter-spacing:-0.06rem);
+  }
+
+  @include large {
+    @include heading-sourceSerif4($font-weight:500, $font-size:3rem, $line-height:3.5rem, $letter-spacing:-0.06rem);
+  }
+}
+
+.ssf4-title-700 {
+  @include heading-sourceSerif4($font-weight:700, $font-size:2rem, $line-height:2.25rem, $letter-spacing:-0.02rem);
+
+  @include medium {
+    @include heading-sourceSerif4($font-weight:700, $font-size:2.5rem, $line-height:3rem, $letter-spacing:-0.025rem);
+  }
+
+  @include large {
+    @include heading-sourceSerif4($font-weight:700, $font-size:3rem, $line-height:3.5rem, $letter-spacing:-0.06rem);
+  }
+}
+
+.ssf4-title-300 {
+  @include heading-sourceSerif4($font-weight:300, $font-size:2rem, $line-height:2.25rem, $letter-spacing:-0.02rem);
+
+  @include medium {
+    @include heading-sourceSerif4($font-weight:300, $font-size:2.5rem, $line-height:3rem, $letter-spacing:-0.025rem);
+  }
+
+  @include large {
+    @include heading-sourceSerif4($font-weight:300, $font-size:3rem, $line-height:3.5rem, $letter-spacing:-0.06rem);
+  }
+}
+
+.ssf4-subTitle-700 {
+  @include heading-sourceSerif4($font-weight:700, $font-size:1.5rem, $line-height:1.75rem, $letter-spacing:0rem);
+
+  @include medium {
+    @include heading-sourceSerif4($font-weight:700, $font-size:2rem, $line-height:2.25rem, $letter-spacing:0rem);
+  }
+
+  @include large {
+    @include heading-sourceSerif4($font-weight:700, $font-size:2.5rem, $line-height:3rem, $letter-spacing:-0.025rem);
+  }
+}
+
+.ssf4-subTitle-300 {
+  @include heading-sourceSerif4($font-weight:300, $font-size:1.5rem, $line-height:1.75rem, $letter-spacing:0rem);
+
+  @include medium {
+    @include heading-sourceSerif4($font-weight:300, $font-size:2rem, $line-height:2.25rem, $letter-spacing:0rem);
+  }
+
+  @include large {
+    @include heading-sourceSerif4($font-weight:300, $font-size:2.5rem, $line-height:3rem, $letter-spacing:-0.025rem);
+  }
+}
+
+.ssf4-subSubTitle-600 {
+  @include heading-sourceSerif4($font-weight:600, $font-size:1.25rem, $line-height:1.5rem, $letter-spacing:0rem);
+
+  @include medium {
+    @include heading-sourceSerif4($font-weight:600, $font-size:1.5rem, $line-height:1.75rem, $letter-spacing:0rem);
+  }
+
+  @include large {
+    @include heading-sourceSerif4($font-weight:600, $font-size:2rem, $line-height:2.25rem, $letter-spacing:0rem);
+  }
+}
+
+// Source Code Pro
+
+@mixin heading-sourceCodePro(
+  $font-size: 1.4rem,
+  $font-weight: 700,
+  $letter-spacing: 0.5rem,
+  $line-height: 1.6rem,
+  $text-decoration: none,
+  $paragraph-spacing: 0rem,
+)  {
+	font-family: 'Source Code Pro';
+	font-size: $font-size;
+	font-weight: $font-weight;
+	letter-spacing: $letter-spacing;
+	line-height: $line-height;
+	font-style: normal;
+	text-decoration: $text-decoration;
+	margin-bottom: $paragraph-spacing;
+}
+
+.scp-title-700 {
+  @include heading-sourceCodePro($font-weight:700,$font-size:2rem, $line-height:2.25rem, $letter-spacing:-0.02rem);
+
+  @include medium {
+    @include heading-sourceCodePro($font-weight:700,$font-size:2.5rem, $line-height:3rem, $letter-spacing:-0.025rem);
+  }
+
+  @include large {
+    @include heading-sourceCodePro($font-weight:700,$font-size:3rem, $line-height:3.5rem, $letter-spacing:-0.06rem);
+  }
+}
+
+.scp-title-300 {
+  @include heading-sourceCodePro($font-weight:300,$font-size:2rem, $line-height:2.25rem, $letter-spacing:-0.02rem);
+
+  @include medium {
+    @include heading-sourceCodePro($font-weight:300,$font-size:2.5rem, $line-height:3rem, $letter-spacing:-0.06rem);
+  }
+
+  @include large {
+    @include heading-sourceCodePro($font-weight:300,$font-size:3rem, $line-height:3.5rem, $letter-spacing:-0.06rem);
+  }
+}
+
+.scp-subTitle-700 {
+  @include heading-sourceCodePro($font-weight:700,$font-size:1.5rem, $line-height:1.75rem, $letter-spacing:0rem);
+
+  @include medium {
+    @include heading-sourceCodePro($font-weight:700,$font-size:2rem, $line-height:2.25rem, $letter-spacing:0rem);
+  }
+
+  @include large {
+    @include heading-sourceCodePro($font-weight:700,$font-size:2.5rem, $line-height:3rem, $letter-spacing:-0.025rem);
+  }
+}
+
+.scp-subTitle-300 {
+  @include heading-sourceCodePro($font-weight:300,$font-size:1.5rem, $line-height:1.75rem, $letter-spacing:0rem);
+
+  @include medium {
+    @include heading-sourceCodePro($font-weight:300,$font-size:2rem, $line-height:2.25rem, $letter-spacing:0rem);
+  }
+
+  @include large {
+    @include heading-sourceCodePro($font-weight:300,$font-size:2.5rem, $line-height:3rem, $letter-spacing:-0.025rem);
+  }
+}
+
+.scp-subSubTitle-600 {
+  @include heading-sourceCodePro($font-weight:600,$font-size:1.25rem, $line-height:1.5rem, $letter-spacing:0rem);
+
+  @include medium {
+    @include heading-sourceCodePro($font-weight:600,$font-size:1.5rem, $line-height:1.75rem, $letter-spacing:0rem);
+  }
+
+  @include large {
+    @include heading-sourceCodePro($font-weight:600,$font-size:2rem, $line-height:2.25rem, $letter-spacing:0rem);
+  }
+}

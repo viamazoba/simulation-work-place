@@ -1,0 +1,434 @@
+@use 'colors-vars';
+
+// Color Usage variables - use these (via the `clr` function below)
+// rather than color variables directly.
+$mainColors: (
+  uniandes-color-brand-white: colors-vars.$uniandes-color-brand-white,
+  uniandes-color-brand-black: colors-vars.$uniandes-color-brand-black,
+);
+
+$neutralColors: (
+  uniandes-color-neutro-90: colors-vars.$uniandes-color-neutro-90,
+  uniandes-color-neutro-80: colors-vars.$uniandes-color-neutro-80,
+  uniandes-color-neutro-70: colors-vars.$uniandes-color-neutro-70,
+  uniandes-color-neutro-60: colors-vars.$uniandes-color-neutro-60,
+  uniandes-color-neutro-50: colors-vars.$uniandes-color-neutro-50,
+  uniandes-color-neutro-40: colors-vars.$uniandes-color-neutro-40,
+  uniandes-color-neutro-30: colors-vars.$uniandes-color-neutro-30,
+  uniandes-color-neutro-20: colors-vars.$uniandes-color-neutro-20,
+);
+
+$ecosystemColors: (
+  ecosystem-color-primary: colors-vars.$ecosystem-color-primary,
+  ecosystem-color-discover: colors-vars.$ecosystem-color-discover,
+  ecosystem-color-impact: colors-vars.$ecosystem-color-impact,
+  ecosystem-color-etb: colors-vars.$ecosystem-color-etb,
+  ecosystem-color-power: colors-vars.$ecosystem-color-power,
+  ecosystem-color-patent: colors-vars.$ecosystem-color-patent,
+  ecosystem-color-incubate: colors-vars.$ecosystem-color-incubate,
+  ecosystem-color-biome: colors-vars.$ecosystem-color-biome,
+);
+
+$textColorsLight: (
+  uniandes-color-primarytext-lightbg: colors-vars.$uniandes-color-primarytext-lightbg,
+  uniandes-color-secondarytext-lightbg: colors-vars.$uniandes-color-secondarytext-lightbg,
+  uniandes-color-disabledtext-lightbg: colors-vars.$uniandes-color-disabledtext-lightbg,
+  uniandes-color-linktext-lightbg: colors-vars.$uniandes-color-linktext-lightbg,
+  uniandes-color-linktext-visited-lightbg: colors-vars.$uniandes-color-linktext-visited-lightbg,
+);
+
+$semanticColorsLight: (
+  uniandes-color-success-lightbg: colors-vars.$uniandes-color-success-lightbg,
+  uniandes-color-alert-lightbg: colors-vars.$uniandes-color-alert-lightbg,
+  uniandes-color-error-lightbg: colors-vars.$uniandes-color-error-lightbg,
+);
+
+$backgroundColorsLight: (
+  uniandes-color-primarybackground-lightbg: colors-vars.$uniandes-color-primarybackground-lightbg,
+  uniandes-color-secondarybackground-lightbg: colors-vars.$uniandes-color-secondarybackground-lightbg,
+);
+
+$secondaryColorsLight: (
+  uniandes-color-secondary-01-lightbg: colors-vars.$uniandes-color-secondary-01-lightbg,
+  uniandes-color-secondary-02-lightbg: colors-vars.$uniandes-color-secondary-02-lightbg,
+);
+
+$interactiveBackgroundLight: (
+  background-primary-default-lightbg: colors-vars.$background-primary-default-lightbg,
+  background-primary-hover-lightbg: colors-vars.$background-primary-hover-lightbg,
+  background-primary-focus-lightbg: colors-vars.$background-primary-focus-lightbg,
+  background-primary-disabled-lightbg: colors-vars.$background-primary-disabled-lightbg,
+  background-secondary-hover-lightbg: colors-vars.$background-secondary-hover-lightbg,
+  background-secondary-focus-lightbg: colors-vars.$background-secondary-focus-lightbg,
+  background-secondary-selected-lightbg: colors-vars.$background-secondary-selected-lightbg,
+  background-tertiary-hover-lightbg: colors-vars.$background-tertiary-hover-lightbg,
+  background-tertiary-focus-lightbg: colors-vars.$background-tertiary-focus-lightbg,
+);
+
+$interactiveContentLight: (
+  content-primary-default-lightbg: colors-vars.$content-primary-default-lightbg,
+  content-primary-hover-lightbg: colors-vars.$content-primary-hover-lightbg,
+  content-primary-focus-lightbg: colors-vars.$content-primary-focus-lightbg,
+  content-primary-disabled-lightbg: colors-vars.$content-primary-disabled-lightbg,
+  content-secondary-default-lightbg: colors-vars.$content-secondary-default-lightbg,
+  content-secondary-hover-lightbg: colors-vars.$content-secondary-hover-lightbg,
+  content-secondary-focus-lightbg: colors-vars.$content-secondary-focus-lightbg,
+  content-secondary-disabled-lightbg: colors-vars.$content-secondary-disabled-lightbg,
+  content-secondary-selected-lightbg: colors-vars.$content-secondary-selected-lightbg,
+  content-tertiary-default-lightbg: colors-vars.$content-tertiary-default-lightbg,
+  content-tertiary-hover-lightbg: colors-vars.$content-tertiary-hover-lightbg,
+  content-tertiary-focus-lightbg: colors-vars.$content-tertiary-focus-lightbg,
+  content-tertiary-disabled-lightbg: colors-vars.$content-tertiary-disabled-lightbg,
+);
+
+$interactiveBorderLight: (
+  border-primary-hover-lightbg: colors-vars.$border-primary-hover-lightbg,
+  border-primary-focus-lightbg: colors-vars.$border-primary-focus-lightbg,
+  border-secondary-default-lightbg: colors-vars.$border-secondary-default-lightbg,
+  border-secondary-hover-lightbg: colors-vars.$border-secondary-hover-lightbg,
+  border-secondary-focus-lightbg: colors-vars.$border-secondary-focus-lightbg,
+  border-secondary-disabled-lightbg: colors-vars.$border-secondary-disabled-lightbg,
+  border-secondary-selected-lightbg: colors-vars.$border-secondary-selected-lightbg,
+  border-tertiary-hover-lightbg: colors-vars.$border-tertiary-hover-lightbg,
+  border-tertiary-focus-lightbg: colors-vars.$border-tertiary-focus-lightbg,
+);
+
+$textColorsDark: (
+  uniandes-color-primarytext-darkbg: colors-vars.$uniandes-color-primarytext-darkbg,
+  uniandes-color-secondarytext-darkbg: colors-vars.$uniandes-color-secondarytext-darkbg,
+  uniandes-color-disabledtext-darkbg: colors-vars.$uniandes-color-disabledtext-darkbg,
+  uniandes-color-linktext-darkbg: colors-vars.$uniandes-color-linktext-darkbg,
+  uniandes-color-linktext-visited-darkbg: colors-vars.$uniandes-color-linktext-visited-darkbg,
+);
+
+$semanticColorsDark: (
+  uniandes-color-success-darkbg: colors-vars.$uniandes-color-success-darkbg,
+  uniandes-color-alert-darkbg: colors-vars.$uniandes-color-alert-darkbg,
+  uniandes-color-error-darkbg: colors-vars.$uniandes-color-error-darkbg,
+);
+
+$backgroundColorsDark: (
+  uniandes-color-primarybackground-darkbg: colors-vars.$uniandes-color-primarybackground-darkbg,
+  uniandes-color-secondarybackground-darkbg: colors-vars.$uniandes-color-secondarybackground-darkbg,
+);
+
+$secondaryColorsDark: (
+  uniandes-color-secondary-01-darkbg: colors-vars.$uniandes-color-secondary-01-darkbg,
+  uniandes-color-secondary-02-darkbg: colors-vars.$uniandes-color-secondary-02-darkbg,
+);
+
+$interactiveBackgroundDark: (
+  background-primary-default-darkbg: colors-vars.$background-primary-default-darkbg,
+  background-primary-hover-darkbg: colors-vars.$background-primary-hover-darkbg,
+  background-primary-focus-darkbg: colors-vars.$background-primary-focus-darkbg,
+  background-primary-disabled-darkbg: colors-vars.$background-primary-disabled-darkbg,
+  background-primary-selected-darkbg: colors-vars.$background-primary-selected-darkbg,
+  background-secondary-hover-darkbg: colors-vars.$background-secondary-hover-darkbg,
+  background-secondary-focus-darkbg: colors-vars.$background-secondary-focus-darkbg,
+  background-secondary-selected-darkbg: colors-vars.$background-secondary-selected-darkbg,
+  background-tertiary-hover-darkbg: colors-vars.$background-tertiary-hover-darkbg,
+  background-tertiary-focus-darkbg: colors-vars.$background-tertiary-focus-darkbg,
+);
+
+$interactiveContentDark: (
+  content-primary-default-darkbg: colors-vars.$content-primary-default-darkbg,
+  content-primary-hover-darkbg: colors-vars.$content-primary-hover-darkbg,
+  content-primary-focus-darkbg: colors-vars.$content-primary-focus-darkbg,
+  content-primary-disabled-darkbg: colors-vars.$content-primary-disabled-darkbg,
+  content-secondary-default-darkbg: colors-vars.$content-secondary-default-darkbg,
+  content-secondary-hover-darkbg: colors-vars.$content-secondary-hover-darkbg,
+  content-secondary-focus-darkbg: colors-vars.$content-secondary-focus-darkbg,
+  content-secondary-disabled-darkbg: colors-vars.$content-secondary-disabled-darkbg,
+  content-secondary-selected-darkbg: colors-vars.$content-secondary-selected-darkbg,
+  content-tertiary-default-darkbg: colors-vars.$content-tertiary-default-darkbg,
+  content-tertiary-hover-darkbg: colors-vars.$content-tertiary-hover-darkbg,
+  content-tertiary-focus-darkbg: colors-vars.$content-tertiary-focus-darkbg,
+  content-tertiary-disabled-darkbg: colors-vars.$content-tertiary-disabled-darkbg,
+);
+
+$interactiveBorderDark: (
+  border-primary-hover-darkbg: colors-vars.$border-primary-hover-darkbg,
+  border-primary-focus-darkbg: colors-vars.$border-primary-focus-darkbg,
+  border-secondary-default-darkbg: colors-vars.$border-secondary-default-darkbg,
+  border-secondary-hover-darkbg: colors-vars.$border-secondary-hover-darkbg,
+  border-secondary-focus-darkbg: colors-vars.$border-secondary-focus-darkbg,
+  border-secondary-disabled-darkbg: colors-vars.$border-secondary-disabled-darkbg,
+  border-secondary-selected-darkbg: colors-vars.$border-secondary-selected-darkbg,
+  border-tertiary-hover-darkbg: colors-vars.$border-tertiary-hover-darkbg,
+  border-tertiary-focus-darkbg: colors-vars.$border-tertiary-focus-darkbg,
+);
+
+$defaultColors: (
+  text: colors-vars.$gray,
+  text-inverse: colors-vars.$white,
+  background: colors-vars.$white,
+  background-section: colors-vars.$gray-lightest,
+  primary: colors-vars.$blue,
+  secondary: colors-vars.$purple,
+  accent: colors-vars.$gray-dark,
+  accent-high: colors-vars.$black,
+  highlight: colors-vars.$gray-lighter,
+  highlight-high: colors-vars.$gray-lightest,
+  muted: colors-vars.$near-white,
+  warning: colors-vars.$yellow-light,
+  error: colors-vars.$red-light,
+  message: colors-vars.$green-light,
+);
+
+$darkColors: (
+  text: colors-vars.$white,
+  text-inverse: colors-vars.$gray,
+  background: colors-vars.$gray,
+  background-inverse: colors-vars.$gray-light,
+  background-section: colors-vars.$gray-dark,
+  primary: colors-vars.$blue,
+  secondary: colors-vars.$purple,
+  accent: colors-vars.$gray-lightest,
+  accent-high: colors-vars.$white,
+  highlight: colors-vars.$gray-dark,
+  highlight-high: colors-vars.$gray-darker,
+  muted: colors-vars.$gray-darker,
+  warning: colors-vars.$yellow-light,
+  error: colors-vars.$red-light,
+  message: colors-vars.$green-light,
+);
+
+$tumasColors: (
+  uniandes-tumas-blue-violet: colors-vars.$uniandes-tumas-blue-violet,
+);
+
+///////////
+// Usage //
+///////////
+// This color function makes it easy for you to call a color by it's functional
+// name anywhere you need.
+// E.g. to use the `text` color, you type: `color: clr(text);`
+//
+// How it works:
+// This function works in conjunction with the dynamic css custom properties
+// declarations below. The item called in the function is prefixed with
+// `var(--c-` to call the custom property for that color.
+// E.g. `color: clr(text);` will return `color: var(--c-text);`
+// Note: (The `--c-` is added via the `@each` loops below)
+@function clr($colorChoice) {
+  @return var(--c-#{$colorChoice});
+}
+
+// Create CSS custom properties
+// This is what powers the built-in OS light/dark mode switching.
+// For each color variable above (e.g. `text` and `background`) a css custom
+// property will be created. (e.g. `--c-text:` and `--c-background:`).
+//
+// The first `@each` below will create a custom property for each item in the
+// `$defaultColors` map. So put all of your default colors there.
+//
+// The `prefers-color-scheme: dark` media query below will then create custom
+// properties for each of the colors in the `$darkColors` map only if the
+// browser supports that feature. If there is an exact match (e.g. `text`) in
+// both maps, the one from `$darkColors` will be used on machines that have
+// opted to use the 'dark mode' on their OS.
+:root {
+  // Create custom properties for default colors
+  @each $name, $color in $mainColors {
+    --c-#{$name}: #{$color};
+  }
+
+  @each $name, $color in $neutralColors {
+    --c-#{$name}: #{$color};
+  }
+
+  @each $name, $color in $ecosystemColors {
+    --c-#{$name}: #{$color};
+  }
+
+  @each $name, $color in $textColorsLight {
+    --c-#{$name}: #{$color};
+  }
+
+  @each $name, $color in $semanticColorsLight {
+    --c-#{$name}: #{$color};
+  }
+
+  @each $name, $color in $backgroundColorsLight {
+    --c-#{$name}: #{$color};
+  }
+
+  @each $name, $color in $secondaryColorsLight {
+    --c-#{$name}: #{$color};
+  }
+
+  @each $name, $color in $interactiveBackgroundLight {
+    --c-#{$name}: #{$color};
+  }
+
+  @each $name, $color in $interactiveContentLight {
+    --c-#{$name}: #{$color};
+  }
+
+  @each $name, $color in $interactiveBorderLight {
+    --c-#{$name}: #{$color};
+  }
+
+  @each $name, $color in $textColorsDark {
+    --c-#{$name}: #{$color};
+  }
+
+  @each $name, $color in $semanticColorsDark {
+    --c-#{$name}: #{$color};
+  }
+
+  @each $name, $color in $backgroundColorsDark {
+    --c-#{$name}: #{$color};
+  }
+
+  @each $name, $color in $secondaryColorsDark {
+    --c-#{$name}: #{$color};
+  }
+
+  @each $name, $color in $interactiveBackgroundDark {
+    --c-#{$name}: #{$color};
+  }
+
+  @each $name, $color in $interactiveContentDark {
+    --c-#{$name}: #{$color};
+  }
+
+  @each $name, $color in $interactiveBorderDark {
+    --c-#{$name}: #{$color};
+  }
+
+  @each $name, $color in $defaultColors {
+    --c-#{$name}: #{$color};
+  }
+
+  @each $name, $color in $tumasColors {
+    --c-#{$name}: #{$color};
+  }
+
+  // Create custom properties for dark colors, an duse them if the user's OS has dark mode enabled
+  @media (prefers-color-scheme: dark) {
+    @each $name, $color in $darkColors {
+      --c-#{$name}: #{$color};
+    }
+  }
+
+  // Use the default color scheme for the "Default Theme" section of the
+  // component library regardless of OS setting.
+  // This is required to show the correct colors in the component library at all times
+  [data-theme='default'] {
+    @each $name, $color in $defaultColors {
+      --c-#{$name}: #{$color};
+    }
+  }
+
+  [data-theme='main'] {
+    @each $name, $color in $mainColors {
+      --c-#{$name}: #{$color};
+    }
+  }
+
+  [data-theme='neutral'] {
+    @each $name, $color in $neutralColors {
+      --c-#{$name}: #{$color};
+    }
+  }
+
+  [data-theme='text-light'] {
+    @each $name, $color in $textColorsLight {
+      --c-#{$name}: #{$color};
+    }
+  }
+
+  [data-theme='semantic-light'] {
+    @each $name, $color in $semanticColorsLight {
+      --c-#{$name}: #{$color};
+    }
+  }
+
+  [data-theme='background-light'] {
+    @each $name, $color in $backgroundColorsLight {
+      --c-#{$name}: #{$color};
+    }
+  }
+
+  [data-theme='secondary-light'] {
+    @each $name, $color in $secondaryColorsLight {
+      --c-#{$name}: #{$color};
+    }
+  }
+
+  [data-theme='interactive-background-light'] {
+    @each $name, $color in $interactiveBackgroundLight {
+      --c-#{$name}: #{$color};
+    }
+  }
+
+  [data-theme='interactive-content-light'] {
+    @each $name, $color in $interactiveContentLight {
+      --c-#{$name}: #{$color};
+    }
+  }
+
+  [data-theme='interactive-border-light'] {
+    @each $name, $color in $interactiveBorderLight {
+      --c-#{$name}: #{$color};
+    }
+  }
+
+  [data-theme='text-dark'] {
+    @each $name, $color in $textColorsDark {
+      --c-#{$name}: #{$color};
+    }
+  }
+
+  [data-theme='semantic-dark'] {
+    @each $name, $color in $semanticColorsDark {
+      --c-#{$name}: #{$color};
+    }
+  }
+
+  [data-theme='background-dark'] {
+    @each $name, $color in $backgroundColorsDark {
+      --c-#{$name}: #{$color};
+    }
+  }
+
+  [data-theme='secondary-dark'] {
+    @each $name, $color in $secondaryColorsDark {
+      --c-#{$name}: #{$color};
+    }
+  }
+
+  [data-theme='interactive-background-dark'] {
+    @each $name, $color in $interactiveBackgroundDark {
+      --c-#{$name}: #{$color};
+    }
+  }
+
+  [data-theme='interactive-content-dark'] {
+    @each $name, $color in $interactiveContentDark {
+      --c-#{$name}: #{$color};
+    }
+  }
+
+  [data-theme='interactive-border-dark'] {
+    @each $name, $color in $interactiveBorderDark {
+      --c-#{$name}: #{$color};
+    }
+  }
+
+  [data-theme='tumas'] {
+    @each $name, $color in $tumasColors {
+      --c-#{$name}: #{$color};
+    }
+  }
+
+  // Use the dark color scheme for the "Dark Theme" section of the  component
+  // library regardless of OS setting.
+  // This is required to show the correct colors in the component library at all times
+  [data-theme='dark'] {
+    @each $name, $color in $darkColors {
+      --c-#{$name}: #{$color};
+    }
+  }
+}

@@ -1,0 +1,13 @@
+code_content: >
+  {% include 'Ruta al archivo del button.twig' with {
+          id: '' // Variable que define el id,
+          button_base_class: 'clase personalizada de figma ejemplo: btn-primary-large',
+          button_text: 'Texto del componente',
+          aria_label: 'Acción que realiza el botón' // Esto es para accesibilidad,
+          href: '#' // Por defecto es 'none' y solo debe cambiarse si se desea comportamiento de link,
+          target: '_self' // Este atributo solo se habilita si href es diferente de none,
+          iconRight: false // *opcional* por defecto se encuentra en false,
+          iconLeft: false // *opcional* por defecto se encuentra en false,
+          full: false // *opcional* por defecto se encuentra en false,
+          dark: false // *opcional* por defecto se encuentra en false,
+        } %}

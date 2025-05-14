@@ -1,0 +1,8 @@
+{% set heading_class = heading_class|default('ss3-title-700') %}
+{% set heading_text = heading_text|default('Este es un título') %}
+{% set heading_level = heading_level|default(2) %}
+
+
+<h{{heading_level}} {{ bem(heading_class) }}>
+	{{heading_text}}
+</h{{heading_level}}>

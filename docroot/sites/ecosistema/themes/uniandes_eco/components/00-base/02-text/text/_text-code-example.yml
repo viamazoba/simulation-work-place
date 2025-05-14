@@ -1,0 +1,5 @@
+code_content: >
+  {% include 'Ruta al archivo de text.twig' with {
+          text_class: 'clase personalizada de figma sin el dispositivo (dsp,tbt, mbl)',
+          text_content: 'Texto del componente'
+        } %}

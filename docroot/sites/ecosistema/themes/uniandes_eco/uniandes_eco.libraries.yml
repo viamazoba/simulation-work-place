@@ -1,0 +1,10 @@
+global:
+  version: VERSION
+  css:
+    theme:
+      css/theme/colors.css: {}
+  dependencies:
+    - core/drupal.message
+    - core/normalize
+    - core/jquery
+    - core/drupal

@@ -1,0 +1,6 @@
+code_content: >
+  {% include 'Ruta al archivo del heading.twig' with {
+          heading_class: 'clase personalizada de figma  sin el dispositivo (dsp, tbt, mbl).',
+          heading_text: 'Texto del componente',
+          heading_level: 3 // Este es el nivel del heading
+        } %}

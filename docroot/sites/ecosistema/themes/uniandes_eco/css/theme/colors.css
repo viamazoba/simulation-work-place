@@ -1,0 +1,17 @@
+:root {
+  --c-text: white;
+  --c-text-inverse: #666;
+  --c-background: #666;
+  --c-background-inverse: #888;
+  --c-background-section: #4c4c4c;
+  --c-primary: #062043;
+  --c-secondary: #381446;
+  --c-accent: #e5e5e5;
+  --c-accent-high: white;
+  --c-highlight: #4c4c4c;
+  --c-highlight-high: #333;
+  --c-muted: #333;
+  --c-warning: #727415;
+  --c-error: #fbe3e4;
+  --c-message: #cfefc2;
+}

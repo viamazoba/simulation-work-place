@@ -1,0 +1,98 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming.
+ */
+
+/**
+ * Implements hook_preprocess_image_widget().
+ */
+function uniandes_edu_preprocess_image_widget(array &$variables) {
+  $data = &$variables['data'];
+
+  // This prevents image widget templates from rendering preview container HTML
+  // to users that do not have permission to access these previews.
+  // @todo revisit in https://drupal.org/node/953034
+  // @todo revisit in https://drupal.org/node/3114318
+  if (isset($data['preview']['#access']) && $data['preview']['#access'] === FALSE) {
+    unset($data['preview']);
+  }
+}
+
+/**
+ * Implements hook_preprocess_pager().
+ */
+function uniandes_edu_preprocess_pager(&$variables) {
+  $variables['items']['total_pages'] = isset($variables['items']['pages']) ? count($variables['items']['pages']) : 0;
+}
+
+/**
+ * Implementation of hook_theme_suggestions_hook().
+ */
+function uniandes_edu_theme_suggestions_block_alter(&$suggestions, $variables) {
+  if (isset($variables['elements']['content']['#block_content'])) {
+    $bundle = $variables['elements']['content']['#block_content']->bundle();
+    array_splice($suggestions, 1, 0, 'block__' . $bundle);
+  }
+}
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function uniandes_edu_preprocess_node(&$variables) {
+  $node = $variables['node'];
+  $timestamp = $node->get('created')->value;
+  $variables['full_date'] = \Drupal::service('date.formatter')->format($timestamp, 'date_card_simple');
+    // Reemplaza la lógica de $home_paths por la verificación de página de inicio.
+    $path_matcher = \Drupal::service('path.matcher');
+    $is_home = $path_matcher->isFrontPage();
+    
+    // Asigna esta información a las variables de plantilla.
+    $variables['is_home'] = $is_home;
+    $current_url = \Drupal::request()->getRequestUri();
+    $variables['current_url'] = $current_url;
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for paragraph entities.
+ */
+function uniandes_edu_preprocess_paragraph(array &$variables) {
+  // Obtén el párrafo.
+  $paragraph = $variables['paragraph'];
+  if ($paragraph->bundle() == 'section') {
+    $variables['content']['regions']['#attributes']['spacing'] = $paragraph->get('field_section_spacing')->value;
+  }
+}
+
+
+/**
+ * Implements hook_theme_suggestions_taxonomy_term_alter().
+ */
+function uniandes_edu_theme_suggestions_taxonomy_term_alter(array &$suggestions, array $variables) {
+  /** @var \Drupal\taxonomy\TermInterface $term */
+  $term = $variables['elements']['#taxonomy_term'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+  // Add view mode theme suggestions.
+  $suggestions[] = 'taxonomy_term__' . $sanitized_view_mode;
+  $suggestions[] = 'taxonomy_term__' . $term->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'taxonomy_term__' . $term->id() . '__' . $sanitized_view_mode;
+}
+
+function uniandes_edu_preprocess_views_view(&$variables) {
+  if ($variables['id'] == 'sg_calendar') {
+    $variables['#attached']['drupalSettings']['fullcalendar']['js-view-dom-id-' . $variables['dom_id']]['options']['dayMaxEventRows'] = TRUE;
+
+    $variables['#attached']['drupalSettings']['fullcalendar']['js-view-dom-id-' . $variables['dom_id']]['options']['views']['dayGridMonth']['eventTimeFormat'] = [
+        'hour' => '2-digit',
+        'minute' => '2-digit',
+        'omitZeroMinute'=> false,
+        'meridiem'=> false,
+        'hour12'=> true,
+        'displayEventTime'=> true,
+        'displayEventEnd'=> true,
+        'separator'=> ' - '
+    ];
+
+  }
+}

@@ -1,0 +1,37 @@
+name: Uniandes Ecosistema
+type: theme
+description: Subtema uniandes para el portal ecosistema.
+version: VERSION
+core_version_requirement: '^9 || ^10 || ^11'
+
+base theme: uniandes_ds
+starterkit: true
+dependencies:
+  - drupal:components (^3.0)
+  - drupal:emulsify_twig (^4.0)
+libraries:
+  - uniandes_edu/global
+generator: 'starterkit_theme:10.2.5'
+components:
+  namespaces:
+    base: ../../../../storybook-global/components/00-base
+    atoms: ../../../../storybook-global/components/01-atoms
+    molecules: ../../../../storybook-global/components/02-molecules
+    organisms: ../../../../storybook-global/components/03-organisms
+    templates: ../../../../storybook-global/components/04-templates
+    base_eco: ../../uniandes_eco/components/00-base
+    atoms_eco: ../../uniandes_eco/components/01-atoms
+    molecules_eco: ../uniandes_eco/components/02-molecules
+    organisms_eco: ../uniandes_eco/components/03-organisms
+    templates_eco: ../uniandes_eco/components/04-templates
+regions:
+  newsbar: 'Newsbar'
+  navbar: 'Navbar'
+  menu_middle_top: 'Menu middle - Top'
+  menu_middle_bottom: 'Menu middle - bottom'
+  menu_bottom: 'Menu bottom'
+  content: 'Content'
+  footer_top: 'Footer top'
+  footer_middle_top: 'Footer middle - Top'
+  footer_middle_bottom: 'Footer middle - Bottom'
+  footer_bottom: 'Footer bottom'

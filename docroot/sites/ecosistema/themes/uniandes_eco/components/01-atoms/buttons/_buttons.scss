@@ -1,0 +1,475 @@
+@mixin primary-colors($theme) {
+  cursor: pointer;
+
+  @if $theme == light {
+    color: clr(content-primary-default-lightbg);
+    background-color: clr(background-primary-default-lightbg);
+    border: 1px solid transparent;
+  
+    &:hover {
+      color: clr(content-primary-hover-lightbg);
+      background-color: clr(background-primary-hover-lightbg);
+      border: 1px solid clr(border-primary-hover-lightbg);
+    }
+
+    &:focus {
+      outline: none;
+      color: clr(content-primary-focus-lightbg);
+      background-color: clr(background-primary-focus-lightbg);
+      border: 2px solid clr(border-primary-focus-lightbg);
+    }
+
+    &:disabled {
+      color: clr(content-primary-disabled-lightbg);
+      background-color: clr(background-primary-disabled-lightbg);
+      border: transparent;
+    }
+
+  } @else if $theme == dark {
+
+    color: clr(content-primary-default-darkbg);
+    background-color: clr(background-primary-default-darkbg);
+    border: transparent;
+  
+    &:hover {
+      color: clr(content-primary-hover-lightbg);
+      background-color: clr(background-primary-hover-darkbg);
+      border: 1px solid clr(border-primary-hover-darkbg);
+    }
+
+    &:focus {
+      outline: none;
+      color: clr(content-primary-focus-darkbg);
+      background-color: clr(background-primary-focus-darkbg);
+      border: 2px solid clr(border-primary-focus-darkbg);
+    }
+
+    &:disabled {
+      color: clr(content-primary-disabled-darkbg);
+      background-color: clr(background-primary-disabled-darkbg);
+      border: 1px solid transparent;
+    }
+  }
+}
+
+@mixin secondary-colors($theme) {
+  cursor: pointer;
+
+  @if $theme == light {
+    color: clr(content-secondary-default-lightbg);
+    background-color: transparent;
+    border: 1px solid clr(border-secondary-default-lightbg);
+  
+    &:hover {
+      color: clr(content-secondary-hover-lightbg);
+      background-color: clr(background-secondary-hover-lightbg);
+      border: 1px solid clr(border-secondary-hover-lightbg);
+    }
+
+    &:focus {
+      outline: none;
+      color: clr(content-secondary-focus-lightbg);
+      background-color: clr(background-secondary-focus-lightbg);
+      border: 2px solid clr(border-secondary-focus-lightbg);
+    }
+
+    &:disabled {
+      color: clr(content-secondary-disabled-lightbg);
+      background-color: transparent;
+      border: 1px solid clr(border-secondary-disabled-lightbg);
+    }
+
+  } @else if $theme == dark {
+    color: clr(content-secondary-default-darkbg);
+    background-color: transparent;
+    border: 1px solid clr(border-secondary-default-darkbg);
+  
+    &:hover {
+      color: clr(content-secondary-hover-darkbg);
+      background-color: clr(background-secondary-hover-darkbg);
+      border: 1px solid clr(border-secondary-hover-darkbg);
+    }
+
+    &:focus {
+      outline: none;
+      color: clr(content-secondary-focus-darkbg);
+      background-color: clr(background-secondary-focus-darkbg);
+      border: 2px solid clr(border-secondary-focus-darkbg);
+    }
+
+    &:disabled {
+      color: clr(content-secondary-disabled-darkbg);
+      background-color: transparent;
+      border: 1px solid clr(border-secondary-disabled-darkbg);
+    }
+  }
+}
+
+@mixin tertiary-colors($theme) {
+  cursor: pointer;
+
+  @if $theme == light {
+    color: clr(content-tertiary-default-lightbg);
+    background-color: transparent;
+    border: 0.5px solid transparent;
+  
+    &:hover {
+      color: clr(content-tertiary-hover-lightbg);
+      background-color: clr(background-tertiary-hover-lightbg);
+      border: 0.5px solid transparent;
+    }
+
+    &:focus {
+      outline: none;
+      color: clr(content-tertiary-focus-lightbg);
+      background-color: transparent;
+      border: 0.5px solid clr(border-tertiary-focus-lightbg);
+    }
+
+    &:disabled {
+      color: clr(content-tertiary-disabled-lightbg);
+      background-color: transparent;
+      border: 0.5px solid transparent;
+    }
+
+  } @else if $theme == dark {
+    color: clr(content-tertiary-default-darkbg);
+    background-color: transparent;
+    border: 0.5px solid transparent;
+  
+    &:hover {
+      color: clr(content-tertiary-hover-darkbg);
+      background-color: clr(background-tertiary-hover-darkbg);
+      border: 0.5px solid transparent;
+    }
+
+    &:focus {
+      outline: none;
+      color: clr(content-tertiary-focus-darkbg);
+      background-color: transparent;
+      border: 0.5px solid clr(border-tertiary-focus-darkbg);
+    }
+
+    &:disabled {
+      color: clr(content-tertiary-disabled-darkbg);
+      background-color: transparent;
+      border: 0.5px solid transparent;
+    }
+  }
+}
+
+@mixin buttonSize($size) {
+  width: fit-content;
+  
+  @if $size == large {
+    min-width: 20.5rem;
+    max-width: 100%;
+    min-height: 3.25rem;
+    padding: space('16') space('24');
+
+    @include medium {
+      min-width: 11rem;
+      min-height: 3.25rem;
+    }
+
+  } @else if $size == medium {
+    min-width: 20.5rem;
+    max-width: 100%;
+    min-height: 3rem;
+    padding: space('16') space('24');
+
+    @include medium {
+      min-width: 11rem;
+      min-height: 2.75rem;
+      padding: space('12') space('20');
+    }
+
+
+  }@else if $size == small {
+    min-width: 6.1875rem;
+    max-width: 100%;
+    min-height: 3rem;
+    padding: space('16') space('24');
+
+    @include medium {
+      min-width: 6.1875rem;
+      min-height: 2.5rem;
+      padding: space('12') space('20');
+    }
+
+  }@else if $size == iconLarge {
+    min-width: 20.5rem;
+    max-width: 100%;
+    min-height: 3.25rem;
+    padding: space('16') space('24');
+
+    @include medium {
+      min-width: 13.1875rem;
+      min-height: 3.25rem;
+      padding: space('16') space('24');
+    }
+
+  }@else if $size == iconMedium {
+    min-width: 20.5rem;
+    max-width: 100%;
+    min-height: 3.25rem;
+    padding: space('16') space('24');
+
+    @include medium {
+      min-width: 12.6875rem;
+      min-height: 2.75rem;
+      padding: space('12') space('20');
+    }
+
+
+  }@else if $size == iconSmall {
+    min-width: 8.4375rem;
+    max-width: 100%;
+    min-height: 3.25rem;
+    padding: space('16') space('24');
+
+    @include medium {
+      min-width: 8.4375rem;
+      min-height: 2.75rem;
+      padding: space('12') space('20');
+    }
+
+  }@else if $size == full {
+    width: 100%;
+  }
+}
+
+@mixin displayIcon {
+  display: flex;
+  justify-content: space-between
+}
+
+@mixin space-between-icon {
+  &--iconRight {
+    .icon {
+      margin-left: space('16');
+    }
+  }
+
+  &--iconLeft {
+    .icon {
+      margin-right: space('16');
+    }
+  }
+}
+
+.btn-primary-large {
+  @include primary-colors(light);
+  @include buttonSize(large);
+  @include space-between-icon;
+
+  &--iconRight, 
+  &--iconLeft {
+    @include displayIcon;
+    @include buttonSize(iconLarge)
+  }
+
+  &--dark {
+    @include primary-colors(dark);
+  }
+
+  &--full {
+    @include buttonSize(full)
+  }
+
+  .theme-dark & {
+    @include primary-colors(dark);
+  }
+}
+
+.btn-primary-medium {
+  @include primary-colors(light);
+  @include buttonSize(medium);
+  @include space-between-icon;
+
+  &--iconRight, 
+  &--iconLeft {
+    @include displayIcon;
+    @include buttonSize(iconMedium)
+  }
+
+  &--dark {
+    @include primary-colors(dark);
+  }
+
+  &--full {
+    @include buttonSize(full)
+  }
+
+  .theme-dark & {
+    @include primary-colors(dark);
+  }
+}
+
+.btn-primary-small {
+  @include primary-colors(light);
+  @include buttonSize(small);
+  @include space-between-icon;
+
+  &--iconRight, 
+  &--iconLeft {
+    @include displayIcon;
+    @include buttonSize(iconSmall)
+  }
+
+  &--dark {
+    @include primary-colors(dark);
+  }
+
+  &--full {
+    @include buttonSize(full)
+  }
+
+  .theme-dark & {
+    @include primary-colors(dark);
+  }
+}
+
+.btn-secondary-large {
+  @include secondary-colors(light);
+  @include buttonSize(large);
+  @include space-between-icon;
+
+  &--iconRight, 
+  &--iconLeft {
+    @include displayIcon;
+    @include buttonSize(iconLarge)
+  }
+
+  &--dark {
+    @include secondary-colors(dark);
+  }
+
+  &--full {
+    @include buttonSize(full)
+  }
+
+  .theme-dark & {
+    @include secondary-colors(dark);
+  }
+}
+
+.btn-secondary-medium {
+  @include secondary-colors(light);
+  @include buttonSize(medium);
+  @include space-between-icon;
+
+  &--iconRight,
+  &--iconLeft {
+    @include displayIcon;
+    @include buttonSize(iconMedium)
+  }
+
+  &--dark {
+    @include secondary-colors(dark);
+  }
+
+  &--full {
+    @include buttonSize(full)
+  }
+
+  .theme-dark & {
+    @include secondary-colors(dark);
+  }
+}
+
+.btn-secondary-small {
+  @include secondary-colors(light);
+  @include buttonSize(small);
+  @include space-between-icon;
+
+  &--iconRight, 
+  &--iconLeft {
+    @include displayIcon;
+    @include buttonSize(iconSmall)
+  }
+
+  &--dark {
+    @include secondary-colors(dark);
+  }
+
+  &--full {
+    @include buttonSize(full)
+  }
+
+  .theme-dark & {
+    @include secondary-colors(dark);
+  }
+}
+
+.btn-tertiary-large {
+  @include tertiary-colors(light);
+  @include buttonSize(large);
+  @include space-between-icon;
+
+  &--iconRight, 
+  &--iconLeft {
+    @include displayIcon;
+    @include buttonSize(iconLarge)
+  }
+
+  &--dark {
+    @include tertiary-colors(dark);
+  }
+
+  &--full {
+    @include buttonSize(full)
+  }
+
+  .theme-dark & {
+    @include tertiary-colors(dark);
+  }
+}
+
+.btn-tertiary-medium {
+  @include tertiary-colors(light);
+  @include buttonSize(medium);
+  @include space-between-icon;
+
+  &--iconRight,
+  &--iconLeft {
+    @include displayIcon;
+    @include buttonSize(iconMedium)
+  }
+
+  &--dark {
+    @include tertiary-colors(dark);
+  }
+
+  &--full {
+    @include buttonSize(full)
+  }
+
+  .theme-dark & {
+    @include tertiary-colors(dark);
+  }
+}
+
+.btn-tertiary-small {
+  @include tertiary-colors(light);
+  @include buttonSize(small);
+  @include space-between-icon;
+
+  &--iconRight, 
+  &--iconLeft {
+    @include displayIcon;
+    @include buttonSize(iconSmall)
+  }
+
+  &--dark {
+    @include tertiary-colors(dark);
+  }
+
+  &--full {
+    @include buttonSize(full)
+  }
+
+  .theme-dark & {
+    @include tertiary-colors(dark);
+  }
+}

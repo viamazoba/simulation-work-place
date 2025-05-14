@@ -1,0 +1,208 @@
+// Color variables - it is better to use the colors in
+// components/00-base/01-colors/_01-colors-used.scss rather than
+// these colors directly.
+
+// Grayscale
+$white: white;
+$near-white: #f2f2f2;
+$gray-lightest: #e5e5e5;
+$gray-lighter: #ccc;
+$gray-light: #888;
+$gray: #666;
+$gray-dark: #4c4c4c;
+$gray-darker: #333;
+$black: black;
+
+// Status
+$yellow-light: #f9fb93;
+$red-light: #fbe3e4;
+$green-light: #cfefc2;
+
+// Project
+$purple: #610c63;
+$blue: #005de0;
+$blue-light: #5692e6;
+
+// Main colors
+$uniandes-color-brand-white: #fff;
+$uniandes-color-brand-black: #191916;
+
+// Neutral colors
+$uniandes-color-neutro-90: #4d4d4c;
+$uniandes-color-neutro-80: #616160;
+$uniandes-color-neutro-70: #73726d;
+$uniandes-color-neutro-60: #8a8984;
+$uniandes-color-neutro-50: #bab9b3;
+$uniandes-color-neutro-40: #e0dfda;
+$uniandes-color-neutro-30: #f5f5f2;
+$uniandes-color-neutro-20: #fcfcfa;
+
+// Ecosystem Colors
+$ecosystem-color-primary: #45208b;
+$ecosystem-color-discover: #008dcd;
+$ecosystem-color-impact: #80579d;
+$ecosystem-color-etb: #00a08e;
+$ecosystem-color-power: #e44548;
+$ecosystem-color-patent: #ff8000;
+$ecosystem-color-incubate: #11991b;
+$ecosystem-color-biome: #cb5392;
+
+// Light Background
+// Colores de texto (Estáticos) - Transversal
+$uniandes-color-primarytext-lightbg: #1f1f1c;
+
+// Dark Background
+// Colores de texto (Estáticos) - Transversal
+$uniandes-color-primarytext-darkbg: #fcfcfa;
+$uniandes-color-secondarytext-darkbg: #a4a4a4;
+$uniandes-color-disabledtext-darkbg: #838277;
+
+// Colores de texto (Dinámicos) - Transversal
+$uniandes-color-linktext-darkbg: #7ca0db;
+$uniandes-color-linktext-visited-darkbg: #ae6beb;
+
+// Colores semánticos (Dinámicos) - Transversal
+$uniandes-color-success-darkbg: #79db7d;
+$uniandes-color-alert-darkbg: #f5ad58;
+$uniandes-color-error-darkbg: #f598a9;
+
+// Backgrounds (Dinámicos)
+$uniandes-color-primarybackground-darkbg: #333331;
+$uniandes-color-secondarybackground-darkbg: #4d4c4c;
+
+// Colores secundarios (Dinámicos)
+$uniandes-color-secondary-01-darkbg: #ffe41e;
+$uniandes-color-secondary-02-darkbg: #fff18b;
+
+// Colores interactivos
+// Interactive Background (Dinámicos)
+// Primarios
+$background-primary-default-darkbg: $uniandes-color-neutro-20;
+$background-primary-hover-darkbg: $uniandes-color-secondary-01-darkbg;
+$background-primary-focus-darkbg: $uniandes-color-secondary-02-darkbg;
+$background-primary-disabled-darkbg: $uniandes-color-neutro-90;
+$background-primary-selected-darkbg: $uniandes-color-neutro-20;
+
+// Secondary
+$background-secondary-hover-darkbg: $uniandes-color-neutro-90;
+$background-secondary-focus-darkbg: $uniandes-color-neutro-90;
+$background-secondary-selected-darkbg: $uniandes-color-neutro-20;
+
+// Tertiary
+$background-tertiary-hover-darkbg: $uniandes-color-neutro-90;
+$background-tertiary-focus-darkbg: $uniandes-color-neutro-90;
+
+// Interactive Content (Dinámicos)
+// Primary
+$content-primary-default-darkbg: $uniandes-color-primarytext-lightbg;
+$content-primary-hover-darkbg: $uniandes-color-primarytext-lightbg;
+$content-primary-focus-darkbg: $uniandes-color-primarytext-lightbg;
+$content-primary-disabled-darkbg: $uniandes-color-neutro-40;
+
+// Secondary
+$content-secondary-default-darkbg: $uniandes-color-primarytext-darkbg;
+$content-secondary-hover-darkbg: $uniandes-color-primarytext-darkbg;
+$content-secondary-focus-darkbg: $uniandes-color-primarytext-darkbg;
+$content-secondary-disabled-darkbg: $uniandes-color-neutro-50;
+$content-secondary-selected-darkbg: $uniandes-color-primarytext-lightbg;
+
+// Tertiary
+$content-tertiary-default-darkbg: $uniandes-color-primarytext-darkbg;
+$content-tertiary-hover-darkbg: $uniandes-color-primarytext-darkbg;
+$content-tertiary-focus-darkbg: $uniandes-color-primarytext-darkbg;
+$content-tertiary-disabled-darkbg: $uniandes-color-neutro-50;
+
+// Interactive Border (Dinámicos)
+// Primary
+$border-primary-hover-darkbg: $uniandes-color-neutro-20;
+$border-primary-focus-darkbg: $uniandes-color-neutro-20;
+
+// Secondary
+$border-secondary-default-darkbg: $uniandes-color-neutro-20;
+$border-secondary-hover-darkbg: $uniandes-color-neutro-20;
+$border-secondary-focus-darkbg: $uniandes-color-neutro-20;
+$border-secondary-disabled-darkbg: $uniandes-color-neutro-50;
+$border-secondary-selected-darkbg: $uniandes-color-neutro-20;
+
+// Tertiary
+$border-tertiary-hover-darkbg: $uniandes-color-neutro-20;
+$border-tertiary-focus-darkbg: $uniandes-color-neutro-20;
+
+// Light Background
+// Colores de texto (Estáticos) - Transversal
+$uniandes-color-secondarytext-lightbg: #595959;
+$uniandes-color-disabledtext-lightbg: #747474;
+
+// Colores de texto (Dinámicos) - Transversal
+// Text colors
+$uniandes-color-linktext-lightbg: #2442b2;
+$uniandes-color-linktext-visited-lightbg: #551a8b;
+
+//Colores semánticos (Dinámicos)  - Transversal
+$uniandes-color-success-lightbg: #0b7310;
+$uniandes-color-alert-lightbg: #e58617;
+$uniandes-color-error-lightbg: #bf1332;
+
+// Backgrounds (Dinámicos)
+$uniandes-color-primarybackground-lightbg: #f7f6f0;
+$uniandes-color-secondarybackground-lightbg: #fcfcfa;
+
+// Colores secundarios (Dinámicos)
+$uniandes-color-secondary-01-lightbg: #ffe41e;
+$uniandes-color-secondary-02-lightbg: #fff18b;
+
+// Colores interactivos
+// Interactive Background (Dinámicos)
+// Primary
+$background-primary-default-lightbg: $uniandes-color-brand-black;
+$background-primary-hover-lightbg: $uniandes-color-secondary-01-lightbg;
+$background-primary-focus-lightbg: $background-primary-hover-lightbg;
+$background-primary-disabled-lightbg: $uniandes-color-neutro-40;
+
+// Secondary
+$background-secondary-hover-lightbg: $uniandes-color-neutro-50;
+$background-secondary-focus-lightbg: $background-secondary-hover-lightbg;
+$background-secondary-selected-lightbg: $uniandes-color-neutro-90;
+
+// Tertiary
+$background-tertiary-hover-lightbg: $uniandes-color-neutro-30;
+$background-tertiary-focus-lightbg: $background-tertiary-hover-lightbg;
+
+// Interactive Content (Dinámicos)
+// Primary
+$content-primary-default-lightbg: $uniandes-color-primarytext-darkbg;
+$content-primary-hover-lightbg: $uniandes-color-primarytext-lightbg;
+$content-primary-focus-lightbg: $uniandes-color-primarytext-lightbg;
+$content-primary-disabled-lightbg: $uniandes-color-neutro-90;
+
+// Secondary
+$content-secondary-default-lightbg: $uniandes-color-primarytext-lightbg;
+$content-secondary-hover-lightbg: $uniandes-color-primarytext-lightbg;
+$content-secondary-focus-lightbg: $uniandes-color-primarytext-lightbg;
+$content-secondary-disabled-lightbg: $uniandes-color-neutro-70;
+$content-secondary-selected-lightbg: $uniandes-color-primarytext-darkbg;
+
+// Tertiary
+$content-tertiary-default-lightbg: $uniandes-color-primarytext-lightbg;
+$content-tertiary-hover-lightbg: $uniandes-color-primarytext-lightbg;
+$content-tertiary-focus-lightbg: $uniandes-color-primarytext-lightbg;
+$content-tertiary-disabled-lightbg: $uniandes-color-neutro-70;
+
+// Interactive Border (Dinámicos)
+// Primary
+$border-primary-hover-lightbg: $uniandes-color-brand-black;
+$border-primary-focus-lightbg: $uniandes-color-neutro-90;
+
+// Secondary
+$border-secondary-default-lightbg: $uniandes-color-brand-black;
+$border-secondary-hover-lightbg: $uniandes-color-brand-black;
+$border-secondary-focus-lightbg: $uniandes-color-brand-black;
+$border-secondary-disabled-lightbg: $uniandes-color-neutro-70;
+$border-secondary-selected-lightbg: $uniandes-color-brand-black;
+
+// Tertiary
+$border-tertiary-hover-lightbg: $uniandes-color-brand-black;
+$border-tertiary-focus-lightbg: $uniandes-color-neutro-50;
+
+//Tu+
+$uniandes-tumas-blue-violet: #5a4cfa;
