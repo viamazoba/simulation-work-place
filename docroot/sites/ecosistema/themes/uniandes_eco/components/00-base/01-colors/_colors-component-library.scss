@@ -1,5 +1,72 @@
 @use 'colors-used' as *;
 
+// Estilos para bg de las cards
+.container-colors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: flex-start;
+}
+
+.color-card {
+  border-radius: 1rem;
+  padding: 0;
+  min-width: 220px;
+  max-width: 300px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.color-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  text-align: left;
+}
+
+.color-box {
+  width: 100%;
+  height: 88px;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.color-label {
+  font-size: 0.97rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+  color: #393939;
+  width: 100%;
+  text-align: left;
+}
+
+.color-class, .color-hex, .color-var {
+  font-family: 'Roboto Mono';
+  font-size: 0.92rem;
+  color: #555;
+}
+
+.bg-primary-black {
+  background-color: #1E1E1E;
+}
+.bg-secondary-yellow {
+  background-color: #FFE41E;
+}
+.bg-tertiary-gray {
+  background-color: #BAB9B3;
+}
+.bg-background-white {
+  background-color: #FCFCFA;
+  border: 1px solid #d3d3d3;
+}
+.bg-auxiliary-gray {
+  background-color: #73726D;
+}
+
+
 // These styles only affect the colors "Usage" page in the component library
 .cl-colors {
   padding: 1rem;
