@@ -50,20 +50,20 @@
 }
 
 .bg-primary-black {
-  background-color: #1E1E1E;
+  background-color: clr(primary-black);
 }
 .bg-secondary-yellow {
-  background-color: #FFE41E;
+  background-color: clr(secondary-yellow);
 }
 .bg-tertiary-gray {
-  background-color: #BAB9B3;
+  background-color: clr(tertiary-gray);
 }
 .bg-background-white {
-  background-color: #FCFCFA;
+  background-color: clr(background-white);
   border: 1px solid #d3d3d3;
 }
 .bg-auxiliary-gray {
-  background-color: #73726D;
+  background-color: clr(auxiliary-gray);
 }
 
 
