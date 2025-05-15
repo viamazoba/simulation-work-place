@@ -16,10 +16,8 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Alinea todo a la izquierda */
+  align-items: flex-start;
   margin-bottom: 2rem;
-  background: none; /* Sin fondo */
-  box-shadow: none; /* Sin sombra */
 }
 
 .color-title {
@@ -31,7 +29,7 @@
 
 .color-box {
   width: 100%;
-  height: 88px; /* Más alto */
+  height: 88px;
   border-radius: 0.5rem;
   margin-bottom: 1rem;
 }
@@ -42,20 +40,15 @@
   margin-bottom: 0.2rem;
   color: #393939;
   width: 100%;
-  text-align: left; /* Alineado a la izquierda */
+  text-align: left;
 }
 
 .color-class, .color-hex, .color-var {
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Roboto Mono';
   font-size: 0.92rem;
   color: #555;
 }
 
-.color-var {
-  color: #888;
-}
-
-/* Tus fondos de colores */
 .bg-primary-black {
   background-color: #1E1E1E;
 }
