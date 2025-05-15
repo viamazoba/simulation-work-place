@@ -1,9 +1,21 @@
-{% set colors_base_class = "cl-colors" %}
+{% set default_colors = [
+  {'name': 'Primary Black', 'class': 'bg-primary-black', 'hex': '#1E1E1E', 'variable': '$primary-black'},
+  {'name': 'Secondary Yellow', 'class': 'bg-secondary-yellow', 'hex': '#FFE41E', 'variable': '$secondary-yellow'},
+  {'name': 'Tertiary Gray', 'class': 'bg-tertiary-gray', 'hex': '#BAB9B3', 'variable': '$tertiary-gray'},
+  {'name': 'Background White', 'class': 'bg-background-white', 'hex': '#FCFCFA', 'variable': '$background-white'},
+  {'name': 'Auxiliary Gray', 'class': 'bg-auxiliary-gray', 'hex': '#73726D', 'variable': '$auxiliary-gray'}
+] %}
+{% set colors_list = colors is defined ? colors : default_colors %}
 
-<div {{ bem(colors_base_class) }}>
-	{% include "@base/02-text/headings/heading.twig" with {
-    heading_level: 2,
-    heading_class: 'ss3-title-700',
-    heading_text: colors_heading,
-  } %}
+
+<div class="container-colors">
+  {% for color in colors_list %}
+    <div class="color-card">
+      <div class="color-title">{{ color.name }}</div>
+      <div class="color-box {{ color.class }}"></div>
+      <div class="color-label">Class: <span class="color-class">{{ color.class }}</span></div>
+      <div class="color-label">Hex: <span class="color-hex">{{ color.hex }}</span></div>
+      <div class="color-label">Variable: <span class="color-var">{{ color.variable }}</span></div>
+    </div>
+  {% endfor %}
 </div>

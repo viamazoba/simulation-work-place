@@ -2,7 +2,15 @@
 
 // Color Usage variables - use these (via the `clr` function below)
 // rather than color variables directly.
+
 $mainColors: (
+  // Ejercicio Inducción
+  primary-black: colors-vars.$primary-black,
+  secondary-yellow: colors-vars.$secondary-yellow,
+  tertiary-gray: colors-vars.$tertiary-gray,
+  background-white: colors-vars.$background-white,
+  auxiliary-gray: colors-vars.$auxiliary-gray,
+  
   uniandes-color-brand-white: colors-vars.$uniandes-color-brand-white,
   uniandes-color-brand-black: colors-vars.$uniandes-color-brand-black,
 );
