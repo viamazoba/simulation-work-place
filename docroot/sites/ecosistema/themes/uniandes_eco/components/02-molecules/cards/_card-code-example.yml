@@ -1,0 +1,12 @@
+code_content: >
+  {% include 'Ruta al archivo del card.twig' with {
+          card_var: // Variable de la card
+          card_title: // Titulo de la card
+          card_text: // Texto de la card
+          card_img: // URL de la imagen
+          card_img_alt: // Texto alternativo de la imagen
+          card_primary_id: // ID del botón primario
+          card_primary_text: // Texto del botón primario
+          card_secondary_id: // ID del botón secundario
+          card_secondary_text: // Texto del botón secundario
+        } %}

@@ -1,0 +1,9 @@
+card_var: card_var_1
+card_title: Titulo de la card
+card_text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus, congue vel laoreet ac.
+card_img: https://cdn.pixabay.com/photo/2018/08/01/06/43/girl-3576679_640.jpg
+card_img_alt: Texto alternativo de la imagen
+card_primary_id: card_primary_id_1
+card_primary_text: Aceptar
+card_secondary_id: card_secondary_id_1
+card_secondary_text: Cancelar

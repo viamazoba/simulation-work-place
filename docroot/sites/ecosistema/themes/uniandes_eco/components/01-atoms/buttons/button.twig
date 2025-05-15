@@ -3,11 +3,9 @@
 {% set button_text = button_text|default('Aceptar') %}
 {% set button_class = button_type == 'primary' ? 'primary-button' : 'secondary-button' %}
 
-<div class="button-demo" id="{{ button_id }}">
-    <button class="button {{ button_class }}">
-	  {% include '@base/02-text/text/text.twig' with {
-          text_class: "button-text",
-          text_content: button_text,
-        } %}
-    </button>
-</div>
+<button class="button {{ button_class }}"  id="{{ button_id }}">
+    {% include '@base/02-text/text/text.twig' with {
+        text_class: "button-text",
+        text_content: button_text,
+    } %}
+</button>

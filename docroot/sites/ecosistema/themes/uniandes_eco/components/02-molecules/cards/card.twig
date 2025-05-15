@@ -1,0 +1,46 @@
+{% set card_var            = card_var|default('card_var_1') %}
+{% set card_title          = card_title|default('Título de la card') %}
+{% set card_text           = card_text|default('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus, congue vel laoreet ac.') %}
+{% set card_img            = card_img|default('https://cdn.pixabay.com/photo/2018/08/01/06/43/girl-3576679_640.jpg') %}
+{% set card_img_alt        = card_img_alt|default('Texto alternativo de la imagen') %}
+{% set card_primary_id   = card_primary_id|default('') %}
+{% set card_primary_text   = card_primary_text|default('Aceptar') %}
+{% set card_secondary_id = card_secondary_id|default('') %}
+{% set card_secondary_text = card_secondary_text|default('Cancelar') %}
+
+<article class="card">
+  <figure class="card__figure">
+    <img
+      class="card__img"
+      src="{{ card_img }}"
+      alt="{{ card_img_alt }}"
+    />
+  </figure>
+
+  {% include '@base/02-text/text/text.twig' with {
+    text_class: 'sub-title card__title',
+    text_content: card_title
+  } %}
+
+  {% include '@base/02-text/text/text.twig' with {
+    text_class: 'text-body card__body',
+    text_content: card_text
+  } %}
+
+  {% if card_var in ['card_var_1', 'card_var_2'] %}
+    <div class="card__actions {% if card_var == 'card_var_1' %}card__actions--double{% endif %}">
+      {% include '@atoms/buttons/button.twig' with {
+        button_id: card_primary_id,
+        button_type: 'primary',
+        button_text: card_primary_text
+      } %}
+      {% if card_var == 'card_var_1' %}
+        {% include '@atoms/buttons/button.twig' with {
+          button_id: card_secondary_id,
+          button_type: 'secondary',
+          button_text: card_secondary_text
+        } %}
+      {% endif %}
+    </div>
+  {% endif %}
+</article>

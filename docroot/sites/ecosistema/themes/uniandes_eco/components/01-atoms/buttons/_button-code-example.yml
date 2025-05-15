@@ -3,5 +3,4 @@ code_content: >
           button_id: '' // Variable que define el id,
           button_type: 'primary', // Variable que define el tipo de botón,
           button_text: 'Aceptar', // Variable que define el texto del botón,
-          button_class: 'primary-button', // Variable que define la clase del botón,
         } %}
