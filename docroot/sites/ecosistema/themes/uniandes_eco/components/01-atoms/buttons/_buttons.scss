@@ -1,0 +1,37 @@
+.button {
+  width: 176px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font: inherit;
+  border-width: 1px;
+  border-style: solid;
+  outline: none;
+  transition: all 0.2s;
+  box-sizing: border-box;
+  border-color: clr(primary-black);
+}
+
+.primary-button {
+  background-color: clr(primary-black);
+  color: clr(background-white);
+
+  &:hover,
+  &.hover {
+    background-color: clr(secondary-yellow);
+    color: clr(primary-black);
+  }
+}
+
+.secondary-button {
+  background-color: clr(background-white);
+  color: clr(primary-black);
+
+  &:hover,
+  &.hover {
+    background-color: clr(tertiary-gray);
+    color: clr(primary-black);
+  }
+}
