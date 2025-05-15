@@ -1,7 +1,7 @@
-{% set text_class = text_class|default('ss3-body-lg-400') %}
+{% set text_class = text_class|default('body-text') %}
 {% set text_content = text_content %}
 
 
-<span {{ bem(text_class) }}>
+<span class="{{ text_class }}">
 	{{text_content|raw}}
 </span>
