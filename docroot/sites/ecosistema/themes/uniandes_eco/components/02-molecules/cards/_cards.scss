@@ -1,0 +1,46 @@
+.card {
+  width: 378px;
+  padding: 11px 9px;
+  background: clr(background-white);
+  border: 1px solid clr(auxiliary-gray);
+  display: flex;
+  flex-direction: column;
+  &:hover {
+    background: clr(tertiary-gray);
+  }
+}
+
+.card__img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.card__title {
+  margin: 13px 0;
+  color: #73726D;
+;
+}
+
+.card__body {
+  color: clr(primary-black);
+  margin-bottom: 10px;
+}
+
+.card__actions {
+  display: flex;
+  margin-top: 60px;
+
+  &--double {
+    gap: 8px;
+  }
+
+  &:not(&--double) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    & button {
+      width: 100%;
+    }
+  }
+}

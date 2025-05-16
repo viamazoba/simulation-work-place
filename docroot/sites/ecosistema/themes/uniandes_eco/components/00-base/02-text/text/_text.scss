@@ -1,30 +1,56 @@
-@mixin text-sourceSans3 (
+// Roboto Mono
+@mixin text-robotoMono(
   $font-size: 1rem,
   $font-weight: 400,
-  $letter-spacing: 0.5rem,
+  $letter-spacing: 0,
   $text-decoration: none,
   $paragraph-spacing: 0rem,
-  $line-height: 1.5rem,
+  $line-height: 1.5rem
 ) {
-	font-family: 'Source Sans 3';
-	font-size: $font-size;
-	font-weight: $font-weight;
-	letter-spacing: $letter-spacing;
-	line-height: $line-height;
-	font-style: normal;
-	text-decoration: $text-decoration;
-	margin-bottom: $paragraph-spacing;
+  font-family: 'Roboto Mono';
+  font-size: $font-size;
+  font-weight: $font-weight;
+  letter-spacing: $letter-spacing;
+  line-height: $line-height;
+  font-style: normal;
+  text-decoration: $text-decoration;
+  margin-bottom: $paragraph-spacing;
 }
 
+.body-text {
+  @include text-robotoMono(
+    $font-size: 1rem,
+    $font-weight: 400,
+    $letter-spacing: 0,
+    $text-decoration: none,
+    $line-height: 1.25rem,
+    $paragraph-spacing: 0
+  );
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+}
 
-.ss3-body-lg-400 {
-	@include text-sourceSans3($font-weight:400,$font-size:1rem,$line-height:1.5rem,$letter-spacing:0rem, $paragraph-spacing:1rem);
+.sub-title {
+  @include text-robotoMono(
+    $font-size: 0.75rem,
+    $font-weight: 500,
+    $letter-spacing: 0,
+    $text-decoration: none,
+    $line-height: 0.75rem,
+    $paragraph-spacing: 0
+  );
+  line-clamp: 1;
+  -webkit-line-clamp: 1;
+}
 
-	@include medium {
-		@include text-sourceSans3($font-weight:400,$font-size:1.125rem,$line-height:1.75rem,$letter-spacing:0rem, $paragraph-spacing:1.125rem);
-	}
-
-	@include large {
-		@include text-sourceSans3($font-weight:400,$font-size:1.25rem,$line-height:2rem,$letter-spacing:0rem, $paragraph-spacing:1.25rem);
-	}
+.button-text {
+  @include text-robotoMono(
+    $font-size: 18px,
+    $font-weight: 400,
+    $letter-spacing: 0,
+    $text-decoration: none,
+    $line-height: 20px,
+    $paragraph-spacing: 0
+  );
+  text-align: center;
 }
