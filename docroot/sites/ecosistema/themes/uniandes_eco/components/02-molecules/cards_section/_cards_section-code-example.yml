@@ -1,0 +1,19 @@
+code_content: >
+  {% include 'Ruta al archivo del cards_section.twig' with {
+          cards:
+            - card_var: card_var_3
+              card_title: 
+              card_text: 
+              card_img:
+              card_img_alt: 
+            - card_var: card_var_3
+              card_title: 
+              card_text: 
+              card_img: 
+              card_img_alt: 
+            - card_var: card_var_3
+              card_title: 
+              card_text: 
+              card_img: 
+              card_img_alt: 
+        } %}

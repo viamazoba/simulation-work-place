@@ -8,7 +8,7 @@
 {% set card_secondary_id = card_secondary_id|default('') %}
 {% set card_secondary_text = card_secondary_text|default('Cancelar') %}
 
-<article class="card">
+<article class="card {% if card_var == 'card_var_3' %}card_var--hover{% endif %}">
   <figure class="card__figure">
     <img
       class="card__img"

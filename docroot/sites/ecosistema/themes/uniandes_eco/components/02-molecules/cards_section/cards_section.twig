@@ -1,0 +1,35 @@
+{% set cards = cards|default([]) %}
+
+<section class="cards-section">
+    <div class="cards-section__inner">
+
+        <button class="cards-slider__btn cards-slider__btn--prev">
+            <span class="icon icon--arrow-left"></span>
+        </button>
+
+        <div class="cards-slide_title-container">
+            {% include '@base/02-text/text/text.twig' with {
+                text_class: 'body-text card-section__title',
+                text_content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus,'
+            } %}
+        </div>
+
+        <div class="cards-slider__viewport">
+            {% for card in cards %}
+            <div class="cards-slider__item">
+                {% include '@molecules/cards/card.twig' with {
+                card_var:            card.card_var,
+                card_title:          card.card_title,
+                card_text:           card.card_text,
+                card_img:            card.card_img,
+                card_img_alt:        card.card_img_alt,
+                } only %}
+            </div>
+            {% endfor %}
+        </div>
+
+        <button class="cards-slider__btn cards-slider__btn--next">
+            <span class="icon icon--arrow-right"></span>
+        </button>
+    </div>
+</section>

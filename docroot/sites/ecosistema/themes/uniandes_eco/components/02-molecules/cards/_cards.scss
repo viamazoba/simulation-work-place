@@ -5,9 +5,10 @@
   border: 1px solid clr(auxiliary-gray);
   display: flex;
   flex-direction: column;
-  &:hover {
-    background: clr(tertiary-gray);
-  }
+}
+
+.card_var--hover:hover {
+  background: clr(tertiary-gray);
 }
 
 .card__img {
